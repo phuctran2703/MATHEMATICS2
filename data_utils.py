@@ -33,3 +33,7 @@ def modularity(graph, communities):
     modularity_score = nx.algorithms.community.quality.modularity(graph, communities)
     print("Number of communicaties", len(communities), "\nModularity:", modularity_score)
     return modularity_score
+
+if __name__ == "__main__":
+    matrix, graph = read_mtx("soc-dolphins/soc-dolphins.mtx")
+    show_graph(graph)
